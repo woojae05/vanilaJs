@@ -7,7 +7,7 @@ const TODOS_LS = 'toDos'
 let toDos = [];
 
 function deleteToDo(event) {
-    const btn = event.target;
+    const btn = event.target; //
     const li = btn.parentNode;
     toDoList.removeChild(li);
     const cleanToDos = toDos.filter(function(toDo){
@@ -19,6 +19,7 @@ function deleteToDo(event) {
 
 function saveToDos() {
     localStorage.setItem(TODOS_LS, JSON.stringify(toDos));
+    // localstorage에는 data를 저장할 수 없고, 오직 string 형태만 저장 가능
 }
 
 function paintToDo(text) {
