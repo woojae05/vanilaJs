@@ -49,6 +49,6 @@ const c = {
     },
 };
 
-c.hello1();
+c.hello1(); 
 c.hello2();
-c.hello3();
+c.hello3(); // hello3 {}
