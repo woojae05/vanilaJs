@@ -50,7 +50,7 @@ p = new promise((resolve, reject) => {
     }, 1000)
 })
 
-p.then((value)=>{
+p.then(value=>{
     console.log(value); // Success!
 })
 
