@@ -48,10 +48,10 @@ function p() {
     })
 
 }
-p().then((message) => {
+p().then(message => {
     console.log('1000ms 후에 fulfilled 됩니다. ',message); // message 데이터를 받아 옴
-}).catch(() => {
-    console.log('1000ms후에 rejected 됩니다.');
+}).catch(error => {
+    console.log('1000ms후에 rejected 됩니다.',error);
 });
 
 
@@ -64,12 +64,12 @@ function p() {
         setTimeout(() => {
             reject(new Error('bad')); //rejected 
         }, 1000)
-    }) 
+    })
 
 }
 
-p().then(() => {
-    console.log('1000ms 후에 fulfilled 됩니다. ');
-}).catch((resoan) => {
-    console.log('1000ms후에 rejected 됩니다.',reson); // 이유가 넘어 옴 보통 객체로 불러 옴
+p().then(message => {
+    console.log('1000ms 후에 fulfilled 됩니다. ',message);
+}).catch(error => {
+    console.log('1000ms후에 rejected 됩니다.', error); // 이유가 넘어 옴 보통 객체로 불러 옴
 });
