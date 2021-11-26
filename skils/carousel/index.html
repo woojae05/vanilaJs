@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+        }
+
+
+        .container {
+            width: 300vw;
+            height: 90vh;
+            transition:0.5s;
+        }
+
+        img {
+            width: 100vw;
+            float: left;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="carousel">
+        <div class="container" style="overflow: hidden;">
+            <div>
+                <img src="https://upload.wikimedia.org/wikipedia/commons/2/20/Korean_fried_chicken_3_banban.jpg" alt="">
+            </div>
+            <div>
+                <img src="https://img.khan.co.kr/news/2021/05/09/l_2021051001000864600073041.jpg" alt="">
+            </div>
+            <div>
+                <img src="https://newsimg.sedaily.com/2020/11/17/1ZAFYQN80J_1.jpg" alt="">
+            </div>
+        </div>
+    </div>
+
+    <button class="btn1">1</button>
+    <button class="btn2">2</button>
+    <button class="btn3">3</button>
+
+    <script>
+        document.querySelector(".btn1").addEventListener('click', () => {
+            document.querySelector(".container").style.transform = 'translate(0vw)'
+        })
+        document.querySelector(".btn2").addEventListener('click', () => {
+            document.querySelector(".container").style.transform = 'translate(-100vw)'
+        })
+        document.querySelector(".btn3").addEventListener('click', () => {
+            document.querySelector(".container").style.transform = 'translate(-200vw)'
+        })
+    </script>
+</body>
+
+</html>
