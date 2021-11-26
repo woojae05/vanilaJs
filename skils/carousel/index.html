@@ -22,11 +22,28 @@
             width: 100vw;
             float: left;
         }
+        .left{
+            position: absolute;
+            top: 300px;
+            width: 50px;
+            height: 50px;
+            z-index: 1;
+        }
+        .right{
+            position: absolute;
+            top: 300px;
+            width: 50px;
+            height: 50px;
+            right: 0;
+            z-index: 1;
+        }
     </style>
 </head>
 
 <body>
     <div class="carousel">
+        <button class="left">left</button>
+        <button class="right">right</button>
         <div class="container" style="overflow: hidden;">
             <div>
                 <img src="https://upload.wikimedia.org/wikipedia/commons/2/20/Korean_fried_chicken_3_banban.jpg" alt="">
@@ -53,6 +70,21 @@
         })
         document.querySelector(".btn3").addEventListener('click', () => {
             document.querySelector(".container").style.transform = 'translate(-200vw)'
+        })
+
+        let x = 0
+        document.querySelector('.left').addEventListener('click',()=>{
+            if(x!=0){
+                x+=100
+               document.querySelector(".container").style.transform = `translate(${x}vw)`
+           }
+        })
+
+        document.querySelector('.right').addEventListener('click',()=>{
+           if(x>-200){
+               x-=100
+               document.querySelector(".container").style.transform = `translate(${x}vw)`
+           }
         })
     </script>
 </body>
